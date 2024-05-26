@@ -1,0 +1,38 @@
+$breakpoint-mobile:768px;
+// $breakpoint-mobile:1024px;
+
+main{
+    .menu{
+        img{
+            width: 80%;
+            margin: 0 auto;
+            @media (max-width:$breakpoint-mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    .reserve{
+        text-align: center;
+        h2{
+            margin-bottom: 1%;
+        }
+        img{
+            width: 10%;
+            margin-bottom: 1%;
+        }
+        p{
+            font-size: 2rem;
+            @media (max-width:$breakpoint-mobile) {
+                font-size: 1.3rem;
+            }
+        }
+        .attention{
+            font-size: 1.3rem;
+
+            @media (max-width:$breakpoint-mobile) {
+                font-size: 1rem;
+            }
+        }
+    }
+}

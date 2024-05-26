@@ -1,0 +1,46 @@
+$breakpoint-mobile:768px;
+// $breakpoint-mobile:1024px;
+
+body{
+    header{
+        height: 60vh;
+        .header_menu{
+            height: 10vh;
+        }
+        .sub_image{
+            height: 50vh;
+            position: relative;
+            @media (max-width:$breakpoint-mobile) {
+                // height: 25vh;
+            }
+            img{
+                height: 100%;
+                filter: brightness(0.4);
+                object-fit: cover;
+            }
+        
+            h1{
+                color: white;
+                font-size: 8rem;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                font-family: "questa-grande", serif;
+                font-style: italic;
+                @media (max-width:$breakpoint-mobile) {
+                    font-size: 4rem;   
+                }
+            }
+        }
+    
+    }
+
+    section{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    
+}

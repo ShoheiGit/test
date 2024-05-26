@@ -1,0 +1,36 @@
+main{
+    width: 80%;
+    margin: 0 auto;
+
+    .access_text{
+        h4{
+            font-size: 1.5rem;
+            display: inline-block;
+            border-bottom: 1px solid black;
+        }
+        ul{
+            list-style-type: none;
+            li{
+                line-height: 2;
+                a{
+                    color: black;
+                }
+            }
+            img{
+                width: 70%;
+            }
+            .title{
+                font-weight: bold;
+            }
+            .text{
+                margin-bottom: 3%;
+                margin-left: 2%;
+            }
+        }
+    }
+
+    .map{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,42 @@
+main .onayami {
+  text-align: center;
+}
+main .onayami .shoujou {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+@media (max-width: 768px) {
+  main .onayami .shoujou {
+    flex-direction: column;
+  }
+}
+main .onayami .shoujou .shoujou_image {
+  width: 40%;
+}
+main .onayami .shoujou .shoujou_image img {
+  width: 50%;
+}
+main .onayami .shoujou .shoujou_text {
+  width: 60%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+main .onayami .shoujou .shoujou_text ul li {
+  font-size: 1.5rem;
+  line-height: 2em;
+}
+main .appeal {
+  display: flex;
+  background-color: #44B1C9;
+  color: white;
+}
+main .appeal .appeal_text {
+  padding: 5%;
+  line-height: 2rem;
+}
+main .appeal .appeal_text p {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=about.css.map */

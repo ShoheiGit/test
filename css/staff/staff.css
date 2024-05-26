@@ -1,0 +1,85 @@
+main .owner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+main .owner .owner_image {
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 758px) {
+  main .owner .owner_image {
+    width: 80%;
+  }
+}
+main .owner .owner_image img {
+  width: 60%;
+}
+main .owner .owner_deg {
+  width: 50%;
+}
+@media (max-width: 758px) {
+  main .owner .owner_deg {
+    width: 100%;
+  }
+}
+main .owner .owner_deg .name {
+  margin-bottom: 5%;
+}
+main .owner .owner_deg .name .pc {
+  display: block;
+}
+@media (max-width: 758px) {
+  main .owner .owner_deg .name .pc {
+    display: none;
+  }
+}
+main .owner .owner_deg .name .sp {
+  display: none;
+}
+@media (max-width: 758px) {
+  main .owner .owner_deg .name .sp {
+    display: block;
+  }
+}
+main .owner .owner_deg .name h2 {
+  font-size: 3rem;
+}
+main .owner .owner_deg .name h3 {
+  font-size: 2.5rem;
+}
+main .owner .owner_deg .name h4 {
+  font-size: 1.5rem;
+}
+main .owner .owner_deg .achive ul li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+main .sns {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+main .sns .sns_text p {
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+main .sns .sns_image {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+}
+main .sns .sns_image img {
+  width: 20%;
+}
+@media (max-width: 758px) {
+  main .sns .sns_image img {
+    width: 70%;
+  }
+}
+main .comment {
+  text-align: center;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=staff.css.map */

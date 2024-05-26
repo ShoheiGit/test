@@ -1,0 +1,35 @@
+main .menu img {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  main .menu img {
+    width: 100%;
+  }
+}
+main .reserve {
+  text-align: center;
+}
+main .reserve h2 {
+  margin-bottom: 1%;
+}
+main .reserve img {
+  width: 10%;
+  margin-bottom: 1%;
+}
+main .reserve p {
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  main .reserve p {
+    font-size: 1.3rem;
+  }
+}
+main .reserve .attention {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  main .reserve .attention {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,36 @@
+body header {
+  height: 60vh;
+}
+body header .header_menu {
+  height: 10vh;
+}
+body header .sub_image {
+  height: 50vh;
+  position: relative;
+}
+body header .sub_image img {
+  height: 100%;
+  filter: brightness(0.4);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body header .sub_image h1 {
+  color: white;
+  font-size: 8rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "questa-grande", serif;
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  body header .sub_image h1 {
+    font-size: 4rem;
+  }
+}
+body section {
+  opacity: 1;
+  transform: scale(1);
+}/*# sourceMappingURL=sub.css.map */

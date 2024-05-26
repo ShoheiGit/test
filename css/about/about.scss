@@ -1,0 +1,46 @@
+$breakpoint-mobile:768px;
+
+main{
+    .onayami{
+        text-align: center;
+        .shoujou{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5%;
+            @media (max-width:$breakpoint-mobile) {
+                flex-direction: column;
+            }
+            .shoujou_image{
+                width: 40%;
+                img{
+                    width: 50%;
+                }
+            }
+            .shoujou_text{
+                width: 60%;
+                text-align-last: left;
+                ul{
+                    li{
+                        font-size: 1.5rem;
+                        line-height: 2em;
+                    }
+                }
+            }
+        }
+    }
+
+    .appeal{
+        display: flex;
+        background-color: #44B1C9;
+        color: white;
+        .appeal_text{
+            padding: 5%;
+            line-height: 2rem;
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
