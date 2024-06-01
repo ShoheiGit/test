@@ -20,7 +20,7 @@ $(function() {
         arrows: false,
         infinite: true,
         slidesToShow: 1,
-        adaptiveHeight: true,
+        // adaptiveHeight: true,
         autoplay: true,
         autoplaySpeed: 2000,
     });
@@ -48,11 +48,27 @@ $(function() {
       $(window).on('resize', updateMenuClass);
 
     $('.menus_sp').slick({
-        responsive:[{
-            centerMode: true,
+        arrows: false,
+        // infinite: true,
+        // slidesToShow: 3,
+        // responsive:[{
+        //     breakpoint:768,
+        //     centerMode: true,
+        //     centerPadding: '60px',
+        //     slidesToShow: 1,
+        // }],
+
+        slidesToShow: 3,
+        responsive: [
+        {
+            breakpoint: 768, // 399px以下のサイズに適用
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+            },
             centerPadding: '60px',
-            slidesToShow: 1,
-        }],
+        },
+        ],
     });
 
     //LINE登録モーダル

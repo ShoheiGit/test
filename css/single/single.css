@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* ヘッダーの高さを指定 */
+body header {
+  height: 10vh;
+  position: relative;
+}/*# sourceMappingURL=single.css.map */

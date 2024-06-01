@@ -1,8 +1,16 @@
 $breakpoint-mobile:768px;
 
+.about{
+    width: 100%;
+    // max-width: 1200px;
+    margin: 0 auto;
+}
+
 main{
     .onayami{
         text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
         .shoujou{
             display: flex;
             flex-direction: row;
@@ -32,15 +40,26 @@ main{
     }
 
     .appeal{
-        display: flex;
+        width: 100%;
         background-color: #44B1C9;
         color: white;
+        .appeal_max{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
         .appeal_text{
             padding: 5%;
             line-height: 2rem;
             p{
                 font-size: 1.5rem;
             }
+        }
+    }
+
+    @media (max-width:$breakpoint-mobile) {
+        .appeal_max{
+            flex-direction: column;
         }
     }
 }

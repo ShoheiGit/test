@@ -2,14 +2,14 @@ body header {
   height: 60vh;
 }
 body header .header_menu {
-  height: 10vh;
+  height: 10%;
 }
 body header .sub_image {
-  height: 50vh;
+  height: 100%;
   position: relative;
 }
 body header .sub_image img {
-  height: 100%;
+  height: 90%;
   filter: brightness(0.4);
   -o-object-fit: cover;
      object-fit: cover;

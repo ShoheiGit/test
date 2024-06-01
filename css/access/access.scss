@@ -1,6 +1,11 @@
 main{
     width: 80%;
     margin: 0 auto;
+    
+    .access_max{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     .access_text{
         h4{

@@ -1,9 +1,16 @@
 @charset "UTF-8";
+/*
+Theme Name: Re.Laxy
+Author: shoehi
+Description: Re.LaxyのHP.
+Version: 1.0.0
+*/
 /**
 レスポンシブ設定
 **/
 * {
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,6 +55,7 @@ p {
 }
 .nav .nav_modal {
   height: 100%;
+  top: 1%;
 }
 @media (max-width: 768px) {
   .nav .nav_modal {
@@ -167,7 +175,7 @@ body header {
 }
 body header .header_menu {
   z-index: 10;
-  height: 8%;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   background: white;
@@ -183,28 +191,32 @@ body header .header_menu {
   }
 }
 body header .header_menu .logo {
-  width: 30%;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 3%;
 }
 body header .header_menu .logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: auto;
-  width: 70%;
+  width: auto;
+  height: 100%;
+  max-width: 100%; /* 画像の最大幅を親要素の幅に合わせる */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body header .header_menu .nav {
   width: 60%;
 }
 body header .top_image {
   position: absolute;
-  top: 8%;
-  height: 92%;
-  background-image: url(../../img/top_origin.png);
+  top: 10%;
+  height: 90%;
+  background-image: url(img/top_origin.png);
   background-size: cover;
   background-position: center;
 }
 @media (max-width: 768px) {
   body header .top_image {
-    background-image: url(../../img/top_origin_sp.png);
+    background-image: url(img/top_origin_sp.png);
   }
 }
 body header .top_image img {
@@ -222,15 +234,17 @@ body .modal_bg {
   top: 0;
   left: 0;
 }
-body main .top {
+body .top {
   width: 100%;
 }
 body main .about_us {
   background: #44B1C9;
-  padding: 10% 0;
+  padding: 12% 0;
   align-content: center;
 }
 body main .about_us .about_text {
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   color: white;
@@ -242,6 +256,8 @@ body main .about_us .about_text {
 }
 body main .about_us .about_text .about_image {
   width: 50%;
+  min-width: 200px;
+  min-height: 200px;
   align-self: center;
 }
 @media (max-width: 768px) {
@@ -251,6 +267,9 @@ body main .about_us .about_text .about_image {
 }
 body main .about_us .about_text .about_image img {
   width: 100%;
+  min-height: 10vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body main .about_us .about_text .about_us_text {
   width: 50%;
@@ -308,88 +327,47 @@ body main .about_us .about_image {
   margin: 0 auto;
 }
 body main .aroma {
+  width: 100%;
   background-color: #8E9A9D;
-  display: flex;
-  flex-direction: row-reverse;
   color: white;
 }
+body main .aroma .max {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 5% 0;
+}
+body main .aroma .max .aroma_image {
+  margin-left: 5%;
+}
+body main .aroma .max .aroma_desc h2 {
+  font-size: 3.4rem;
+}
 @media (max-width: 768px) {
-  body main .aroma {
+  body main .aroma .max {
     flex-direction: column;
   }
-}
-body main .aroma .aroma_image {
-  min-width: 50%;
-  align-self: center;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  body main .aroma .aroma_image {
+  body main .aroma .max .aroma_image {
+    margin: 0;
+    height: 30%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body main .aroma .max .aroma_image img {
+    height: 60%;
     width: 100%;
   }
-}
-body main .aroma .aroma_image img {
-  width: 80%;
-}
-body main .aroma .aroma_desc {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: 90%;
-}
-body main .aroma .aroma_desc .aroma_text {
-  padding-left: 5%;
-}
-@media (max-width: 768px) {
-  body main .aroma .aroma_desc .aroma_text {
-    padding-right: 5%;
-  }
-}
-body main .aroma .aroma_desc .aroma_text p {
-  font-size: 1.3rem;
-  margin-top: 3%;
-}
-body main .aroma .aroma_desc .aroma_points {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  body main .aroma .aroma_desc .aroma_points {
-    flex-direction: column;
-  }
-}
-body main .aroma .aroma_desc .aroma_points .aroma_point {
-  color: black;
-  margin: 1%;
-  padding: 1%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
-  body main .aroma .aroma_desc .aroma_points .aroma_point {
+  body main .aroma .max .aroma_desc {
+    height: 70%;
+    width: 90%;
     margin: 0 auto;
-    margin-bottom: 3%;
-    width: 30vh;
-    height: 30vh;
   }
-}
-body main .aroma .aroma_desc .aroma_points .aroma_point h4 {
-  font-size: 2.3rem;
-  color: #44B1C9;
-}
-body main .aroma .aroma_desc .aroma_points .aroma_point p {
-  font-size: 1.3rem;
 }
 body main .menu {
+  max-width: 1200px;
   width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -420,6 +398,7 @@ body main .menu .menus article {
 }
 body main .menu .menus article img {
   height: 20%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

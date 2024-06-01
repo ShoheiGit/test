@@ -1,1 +1,25 @@
-/*# sourceMappingURL=news.css.map */
+@charset "UTF-8";
+/* テンプレートのCSSファイルに以下のスタイルを追加してください。 */
+.post-item {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #44B1C9;
+  display: flex;
+  margin-bottom: 2%;
+  padding: 2% 0;
+  color: white;
+}
+.post-item .post-thumbnail {
+  width: 30%;
+  padding: 1%;
+}
+.post-item .post-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.post-item .post_desc {
+  margin-left: 2%;
+}
+.post-item .post-title {
+  font-size: 1.6rem;
+}/*# sourceMappingURL=news.css.map */

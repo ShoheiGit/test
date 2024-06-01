@@ -5,16 +5,16 @@ body{
     header{
         height: 60vh;
         .header_menu{
-            height: 10vh;
+            height: 10%;
         }
         .sub_image{
-            height: 50vh;
+            height: 100%;
             position: relative;
             @media (max-width:$breakpoint-mobile) {
                 // height: 25vh;
             }
             img{
-                height: 100%;
+                height: 90%;
                 filter: brightness(0.4);
                 object-fit: cover;
             }
