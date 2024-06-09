@@ -52,17 +52,17 @@
             <p>個々に寄り添うメニューをご用意しております！</p>
             <div class="menus">
                 <article>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu1.png" alt="">
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu1.png" alt="">
                     <p>更年期・ホルモンケア<br>妊活応援コース</p>
                     <p class="fee">￥13000</p>
                 </article>
                 <article>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu3.png" alt="">
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu3.png" alt="">
                     <p>肩こり・腰痛・関節痛<br>改善コース</p>
                     <p class="fee">￥13000</p>
                 </article>
                 <article>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/menu2.png" alt="">
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu2.png" alt="">
                     <p>漢方アロマ小顔<br>たるみ修正コース</p>
                     <p class="fee">￥8800</p>
                 </article>

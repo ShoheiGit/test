@@ -5,8 +5,16 @@ body{
         height: 10vh;
         position: relative;
     }
-    // footer{
-    //     position: absolute;
-    //     bottom: 0;
-    // }
+
+}
+
+// single.php専用のスタイル
+.single-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    footer {
+        margin-top: auto;
+    }
 }

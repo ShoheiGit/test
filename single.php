@@ -1,8 +1,12 @@
 <?php
 /*
-Template Name: news Page
+Template Name: single Page
 */
 get_header(); ?>
+        <div class="sub_image">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/welcome.png" alt="">
+            <h1><?php the_title(); ?></h1>
+        </div>
         <div class="modal-container">
             <div class="modal-body">
                 <div class="modal-close">×</div>
@@ -14,11 +18,9 @@ get_header(); ?>
             </div>
         </div>
     </header>
-
-    <main>
+    <main class="single">
         <div class="content-wrapper">
             <?php the_content(); ?>
         </div>
     </main>
-    
 <?php get_footer(); ?>

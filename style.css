@@ -48,115 +48,94 @@ p {
   font-size: 1.2rem;
 }
 
-.nav {
-  display: block;
-  z-index: 1100;
-  align-content: center;
-}
-.nav .nav_modal {
-  height: 100%;
-  top: 1%;
-}
-@media (max-width: 768px) {
-  .nav .nav_modal {
-    background-color: #fff;
-    display: none;
-    position: fixed;
-  }
-}
-@media (max-width: 768px) {
-  .nav {
-    /* メニューボタン展開後 */
-  }
-  .nav .nav_button {
-    display: block;
-    position: fixed;
-    z-index: 3;
-    right: 30px;
-    top: 20px;
-    width: 42px;
-    height: 42px;
-    cursor: pointer;
-    text-align: center;
-  }
-  .nav .nav_button span {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    left: 6px;
-    background: #555;
-    transition: 0.3s ease-in-out;
-  }
-  .nav .nav_button span:nth-of-type(1) {
-    top: 10px;
-  }
-  .nav .nav_button span:nth-of-type(2) {
-    top: 20px;
-  }
-  .nav .nav_button span:nth-of-type(3) {
-    top: 30px;
-  }
-  .nav .nav_button.active span:nth-child(1) {
-    top: 16px;
-    left: 6px;
-    background: black;
-    transform: rotate(-45deg);
-  }
-  .nav .nav_button.active span:nth-child(2) {
-    opacity: 0; /* 透明にすることで消えずに残るように */
-  }
-  .nav .nav_button.active span:nth-child(3) {
-    top: 16px;
-    background: black;
-    transform: rotate(45deg);
-  }
-}
-.nav ul {
-  display: flex;
-  height: 100%;
-  font-family: "questa-grande", serif;
-  font-style: italic;
-}
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-  }
-}
-.nav ul li {
-  list-style: none;
-  font-size: 1.5rem;
-}
-@media (max-width: 768px) {
-  .nav ul li {
-    margin: 0 auto;
-    margin-top: 2%;
-    width: 20%;
-  }
-}
-.nav ul li a {
-  color: black;
-  display: inline-block;
-  height: 100%;
-  width: 100%;
+.nav_pc {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav ul .reserve {
-  background-color: #44B1C9;
+.nav_pc ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 768px) {
-  .nav ul .reserve {
-    width: 100%;
-  }
+.nav_pc li {
+  margin: 0 15px;
 }
-.nav ul .reserve a {
-  font-family: "zen-kaku-gothic-antique", sans-serif;
-  font-style: normal;
-  color: white;
+.nav_pc li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
+  font-family: "questa-grande", serif;
+  padding: 10px;
+  transition: color 0.3s;
+}
+.nav_pc li a:hover {
+  color: #44B1C9;
 }
 
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+.nav.active {
+  pointer-events: auto;
+}
+.nav .nav_modal {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+  pointer-events: auto;
+}
+.nav .nav_modal ul {
+  list-style: none;
+  padding: 0;
+}
+.nav .nav_modal ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.nav .nav_modal ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+}
+.nav .nav_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1010;
+  display: block;
+  pointer-events: auto;
+}
+.nav .nav_button span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .nav_pc {
+    display: none;
+  }
+}
 body {
   width: 100%;
   overflow-x: hidden;
@@ -203,8 +182,14 @@ body header .header_menu .logo img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+body header .header_menu .reserve a {
+  color: #44B1C9;
+}
 body header .header_menu .nav {
-  width: 60%;
+  width: 100%;
+}
+body header .header_menu .nav_pc {
+  width: 70%;
 }
 body header .top_image {
   position: absolute;
@@ -257,7 +242,7 @@ body main .about_us .about_text {
 body main .about_us .about_text .about_image {
   width: 50%;
   min-width: 200px;
-  min-height: 200px;
+  min-height: 100%;
   align-self: center;
 }
 @media (max-width: 768px) {
@@ -267,7 +252,7 @@ body main .about_us .about_text .about_image {
 }
 body main .about_us .about_text .about_image img {
   width: 100%;
-  min-height: 10vh;
+  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -383,7 +368,8 @@ body main .menu .menus {
   }
 }
 body main .menu .menus article {
-  height: 60%;
+  margin: 0 2%;
+  height: 50%;
   width: 30%;
   -moz-text-align-last: left;
        text-align-last: left;

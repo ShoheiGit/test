@@ -3,7 +3,6 @@
 Template Name: news Page
 */
 get_header(); ?>
-
         <div class="sub_image">
             <img src="<?php echo get_template_directory_uri(); ?>/img/room1.png" alt="">
             <h1>News</h1>

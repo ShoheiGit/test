@@ -23,6 +23,7 @@ $(function() {
         // adaptiveHeight: true,
         autoplay: true,
         autoplaySpeed: 2000,
+        lazyLoad: 'progressive',
     });
 
 
@@ -47,8 +48,9 @@ $(function() {
       // リサイズ時の判定
       $(window).on('resize', updateMenuClass);
 
-    $('.menus_sp').slick({
+    $('.menus').slick({
         arrows: false,
+        centerPadding: '60px',
         // infinite: true,
         // slidesToShow: 3,
         // responsive:[{
@@ -59,6 +61,7 @@ $(function() {
         // }],
 
         slidesToShow: 3,
+        lazyLoad: 'ondemand',
         responsive: [
         {
             breakpoint: 768, // 399px以下のサイズに適用
