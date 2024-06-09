@@ -1,3 +1,4 @@
+$breakpoint-mobile:768px;
 /* ヘッダーの高さを指定 */
 
 body{
@@ -16,5 +17,14 @@ body{
 
     footer {
         margin-top: auto;
+    }
+}
+
+.single_main{
+    width: 60%;
+    margin: 0 auto;
+
+    @media (max-width:$breakpoint-mobile) {
+        width: 90%;
     }
 }

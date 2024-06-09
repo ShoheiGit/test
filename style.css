@@ -154,7 +154,7 @@ body header {
 }
 body header .header_menu {
   z-index: 10;
-  height: 10%;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   background: white;
@@ -193,21 +193,68 @@ body header .header_menu .nav_pc {
 }
 body header .top_image {
   position: absolute;
-  top: 10%;
-  height: 90%;
-  background-image: url(img/top_origin.png);
+  top: 14vh;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.3);
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-@media (max-width: 768px) {
-  body header .top_image {
-    background-image: url(img/top_origin_sp.png);
-  }
+body header .top_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/top_origin.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8); /* 画像に薄暗いフィルターを追加 */
+  z-index: 1;
 }
 body header .top_image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 2;
+}
+body header .top_image .top_text {
+  position: relative;
+  z-index: 3;
+}
+body header .top_image .top_text h2 {
+  color: white;
+  padding-bottom: 4%;
+}
+body header .top_image .top_text p {
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: white;
+}
+body header .top_image .top_text p span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+body header .top_image .top_text .big {
+  font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  body header .top_image .top_text p {
+    font-size: 1.5rem;
+    line-height: 2.9rem;
+    color: white;
+  }
+  body header .top_image .top_text p span {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  body header .top_image .top_text .big {
+    font-size: 1.7rem;
+  }
 }
 body .modal_bg {
   display: none;
@@ -223,6 +270,8 @@ body .top {
   width: 100%;
 }
 body main .about_us {
+  position: relative;
+  top: 0;
   background: #44B1C9;
   padding: 12% 0;
   align-content: center;
@@ -361,6 +410,7 @@ body main .menu .menus {
   display: flex;
   justify-content: space-between;
   margin: 5% 0;
+  padding: 2%;
 }
 @media (max-width: 768px) {
   body main .menu .menus {
@@ -369,10 +419,11 @@ body main .menu .menus {
 }
 body main .menu .menus article {
   margin: 0 2%;
-  height: 50%;
+  height: 50vh;
   width: 30%;
   -moz-text-align-last: left;
        text-align-last: left;
+  border: solid 1px #ccc;
   box-shadow: 10px 10px 4px #ccc;
 }
 @media (max-width: 768px) {
@@ -380,10 +431,12 @@ body main .menu .menus article {
     width: 100%;
     box-shadow: none;
     margin: 0.1%;
+    height: auto;
   }
 }
 body main .menu .menus article img {
-  height: 20%;
+  height: 25vh;
+  max-height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -451,7 +504,7 @@ body main .concept {
   text-align: center;
 }
 body main .concept img {
-  width: 80%;
+  width: 60%;
 }
 @media (max-width: 768px) {
   body main .concept img {
@@ -590,4 +643,9 @@ body #add_friend {
   padding: 2%;
   width: 70%;
   color: black;
+}
+@media (max-width: 768px) {
+  body #add_friend {
+    bottom: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ get_header(); ?>
             </div>
         </div>
     </header>
-    <main class="single">
+    <main class="single_main">
         <div class="content-wrapper">
             <?php the_content(); ?>
         </div>

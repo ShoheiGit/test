@@ -10,6 +10,9 @@ body{
         .sub_image{
             height: 100%;
             position: relative;
+            position: absolute;
+            top: 13vh;
+            height: 40vh;
             @media (max-width:$breakpoint-mobile) {
                 // height: 25vh;
             }

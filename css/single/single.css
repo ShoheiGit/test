@@ -12,4 +12,14 @@ body header {
 }
 .single-page footer {
   margin-top: auto;
+}
+
+.single_main {
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .single_main {
+    width: 90%;
+  }
 }/*# sourceMappingURL=single.css.map */

@@ -7,6 +7,9 @@ body header .header_menu {
 body header .sub_image {
   height: 100%;
   position: relative;
+  position: absolute;
+  top: 13vh;
+  height: 40vh;
 }
 body header .sub_image img {
   height: 90%;

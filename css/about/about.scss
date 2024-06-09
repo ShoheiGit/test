@@ -39,10 +39,21 @@ main{
         }
     }
 
+    .omakase{
+        background-color: #44B1C9;
+        text-align: center;
+        color: white;
+        padding: 5% 0;
+        p{
+            font-size: 2rem;
+        }
+    }
+
     .appeal{
         width: 100%;
         background-color: #44B1C9;
         color: white;
+        text-align: center;
         .appeal_max{
             max-width: 1200px;
             margin: 0 auto;
@@ -62,4 +73,91 @@ main{
             flex-direction: column;
         }
     }
+
+    .page-content{
+        width: 60%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .about_oil{
+        background-color: #f4f4f4; /* 背景色を設定 */
+    }
+
+    .about_oil_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        align-items: center; /* 中央揃え */
+        justify-content: space-between; /* 両端に配置 */
+        padding: 20px; /* 余白を追加 */
+
+        @media (max-width:$breakpoint-mobile) {
+            flex-direction: column;
+        }
+    }
+    
+    .ao_image, .ao_text {
+        flex: 1; /* 同じ幅で表示 */
+        padding: 10px; /* 内側の余白 */
+    }
+    
+    .ao_image img {
+        width: 100%; /* 画像をコンテナの幅に合わせる */
+        height: auto; /* 画像の高さを自動調整 */
+        border-radius: 8px; /* 画像の角を丸くする */
+    }
+    
+    .ao_text p {
+        margin-top: 20px;
+        position: relative;
+        padding-left: 20px;
+    }
+    .ao_text p::before {
+        content: "■";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: black;
+    }
+
+    .oil_point{
+        background-color: #f4f4f4;
+        .h2{
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        .oil_effect{
+            max-width: 1200px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .effects{
+                border: solid 1px grey;
+                border-radius: 10px;
+                padding: 2%;
+                width: 30%;
+                display: flex;
+                img{
+                    margin-right: 3%;
+                    width: 33%;
+                    height: 30%;
+                    opacity: 0.2;
+                }
+                p{
+                    margin-top: 8%;
+
+                }
+            }
+
+        }
+    }
+   
+
+
 }

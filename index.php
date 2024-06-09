@@ -1,5 +1,13 @@
 <?php get_header(); ?>
-<div class="top_image"></div>
+<div class="top_image">
+    <div class="top_text">
+        <h2>ハンドケアサロン</h2>
+        <p><span>加齢</span>による</p>
+        <p>お悩み解決サロン</p>
+        <p class="big">漢方アロマ×ハンドケア</p>
+        <p>女性のお悩み解決</p>
+    </div>
+</div>
 
 <div class="modal-container">
     <div class="modal-body">
@@ -24,7 +32,11 @@
                 </div>
                 <div class="about_us_text">
                     <h2>About Us</h2>
-                    <p>あなたの心に寄り添う<br>癒しの漢方アロマリンパマッサージ<br>個々の症状に合わせ施術で<br>あなたの健康を<br>根本からサポートします</p>
+                    <p>🤚🏻気付いたら顔より老けてる手の姿<br>
+                    1番仕事する大事な手だからこそ究極のケアが必要</p>
+                    <p>顔のお手入れサロンは沢山あるけど手のお手入れサロンはまだ少ない...<br>
+                    そんな加齢女性の為に作りました✨️<br>
+                    フェイシャル以上のお手入れを目指します🫶</p>
                     <a href="<?php echo esc_url(home_url('/about')); ?>">Read More<span class="dli-arrow-right"></span></a>
                 </div>
             </div>
@@ -33,7 +45,7 @@
         <section class="aroma">
             <div class="max">
                 <div class="aroma_image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/oil.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about_image.jpg" alt="">
                 </div>
                 <div class="aroma_desc">
                     <div class="aroma_text">
@@ -52,19 +64,19 @@
             <p>個々に寄り添うメニューをご用意しております！</p>
             <div class="menus">
                 <article>
-                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu1.png" alt="">
-                    <p>更年期・ホルモンケア<br>妊活応援コース</p>
-                    <p class="fee">￥13000</p>
-                </article>
-                <article>
-                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu3.png" alt="">
-                    <p>肩こり・腰痛・関節痛<br>改善コース</p>
-                    <p class="fee">￥13000</p>
-                </article>
-                <article>
-                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/menu2.png" alt="">
-                    <p>漢方アロマ小顔<br>たるみ修正コース</p>
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand1.jpg" alt="">
+                    <p>加齢によるエイジングハンドケア<br>▪️ハンドケア</p>
                     <p class="fee">￥8800</p>
+                </article>
+                <article>
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand2.jpg" alt="">
+                    <p>シミ予防・日焼け対策ビタミンハンドケア<br>▪️ハンドケア</p>
+                    <p class="fee">￥8800</p>
+                </article>
+                <article>
+                    <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand3.jpg" alt="">
+                    <p>プルプル♡もっちりの手に集中保湿ハンドケア<br>▪️ハンドケア</p>
+                    <p class="fee">￥6600</p>
                 </article>
             </div>
             <a href="<?php echo esc_url(home_url('/menu')); ?>">全メニューを見る</a>
@@ -90,7 +102,8 @@
 
         <section class="concept">
             <h2>Concept</h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/concept_image.jpeg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/ad1.jpg" alt="">
+            
         </section>
 
         <section class="staff">
