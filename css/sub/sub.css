@@ -1,17 +1,15 @@
-body header {
-  height: 40vh;
-}
 body header .header_menu {
   height: 10vh;
+}
+body header .top_image {
+  display: none;
 }
 body header .sub_image {
   height: 100%;
   position: relative;
-  position: absolute;
-  top: 13vh;
-  height: 40vh;
 }
 body header .sub_image img {
+  max-height: 40vh;
   height: 90%;
   filter: brightness(0.4);
   -o-object-fit: cover;

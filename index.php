@@ -1,25 +1,5 @@
 <?php get_header(); ?>
-<div class="top_image">
-    <div class="top_text">
-        <h2>ハンドケアサロン</h2>
-        <p><span>加齢</span>による</p>
-        <p>お悩み解決サロン</p>
-        <p class="big">漢方アロマ×ハンドケア</p>
-        <p>女性のお悩み解決</p>
-    </div>
-</div>
 
-<div class="modal-container">
-    <div class="modal-body">
-        <div class="modal-close">×</div>
-        <div class="modal-content">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/line_modal.png" alt="">
-        </div>
-        <a href="https://qr-official.line.me/gs/M_785cyyhi_BW.png?oat_content=qr"><img id="QR" src="<?php echo get_template_directory_uri(); ?>/img/LINE_QR.png" alt=""></a>
-        <a href="https://lin.ee/5fRrlnq"><p id="add_friend">追加して予約はこちらをクリック</p></a>
-    </div>
-</div>
-</header>
 
     <main class="top">
         <section class="about_us">
@@ -30,7 +10,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/welcome.png" alt="">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/room1.png" alt="">
                 </div>
-                <div class="about_us_text">
+                <div class="about_us_text  scroll_fade">
                     <h2>About Us</h2>
                     <p>🤚🏻気付いたら顔より老けてる手の姿<br>
                     1番仕事する大事な手だからこそ究極のケアが必要</p>
@@ -43,7 +23,7 @@
         </section>
 
         <section class="aroma">
-            <div class="max">
+            <div class="max scroll_fade">
                 <div class="aroma_image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/about_image.jpg" alt="">
                 </div>
@@ -62,20 +42,20 @@
         <section class="menu">
             <h2>Menu</h2>
             <p>個々に寄り添うメニューをご用意しております！</p>
-            <div class="menus">
+            <div class="menus scroll_fade">
                 <article>
                     <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand1.jpg" alt="">
-                    <p>加齢によるエイジングハンドケア<br>▪️ハンドケア</p>
+                    <p>加齢によるエイジングハンドケア</p>
                     <p class="fee">￥8800</p>
                 </article>
                 <article>
                     <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand2.jpg" alt="">
-                    <p>シミ予防・日焼け対策ビタミンハンドケア<br>▪️ハンドケア</p>
+                    <p>シミ予防・日焼け対策ビタミンハンドケア</p>
                     <p class="fee">￥8800</p>
                 </article>
                 <article>
                     <img data-lazy="<?php echo get_template_directory_uri(); ?>/img/hand3.jpg" alt="">
-                    <p>プルプル♡もっちりの手に集中保湿ハンドケア<br>▪️ハンドケア</p>
+                    <p>プルプル♡もっちりの手に集中保湿ハンドケア</p>
                     <p class="fee">￥6600</p>
                 </article>
             </div>
@@ -83,11 +63,11 @@
         </section>
 
         <section class="news">
-            <div class="news_head">
+            <div class="news_head scroll_fade">
                 <h2>News</h2>
                 <p>お知らせ</p>
             </div>
-            <div class="articles">
+            <div class="articles scroll_fade">
                 <?php if(have_posts()) : while(have_posts()):the_post(); ?>
                     <div class="article">
                         
@@ -102,13 +82,13 @@
 
         <section class="concept">
             <h2>Concept</h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/ad1.jpg" alt="">
+            <img class="scroll_fade" src="<?php echo get_template_directory_uri(); ?>/img/handCare.jpg" alt="">
             
         </section>
 
         <section class="staff">
             <h2>Staff</h2>
-            <div class="staff_deg">
+            <div class="staff_deg scroll_fade">
                 <div class="staff_image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/owner.jpg" alt="">
                 </div>

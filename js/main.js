@@ -1,12 +1,10 @@
 $(function() {
     //スクロールするとsectionがフェード
-    $(window).scroll (function() {
+    $(window).on('scroll', function() {
         const Height = $(window).height();
         const scroll = $(window).scrollTop();
         
-        console.log(scroll);
-
-        $("section").each(function() {
+        $(".scroll_fade").each(function() {
             const position = $(this).offset().top;
             
             if(scroll > position - Height + 200){

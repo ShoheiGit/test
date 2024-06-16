@@ -3,20 +3,23 @@ $breakpoint-mobile:768px;
 
 body{
     header{
-        height: 40vh;
+        // height: 40vh;
         .header_menu{
             height: 10vh;
         }
+
+        .top_image{
+            display: none;
+        }
+
         .sub_image{
             height: 100%;
             position: relative;
-            position: absolute;
-            top: 13vh;
-            height: 40vh;
             @media (max-width:$breakpoint-mobile) {
                 // height: 25vh;
             }
             img{
+                max-height: 40vh;
                 height: 90%;
                 filter: brightness(0.4);
                 object-fit: cover;

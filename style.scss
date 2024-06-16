@@ -15,8 +15,14 @@ $breakpoint-mobile:768px;
 
 *{
     width: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
+
+html, body {
+    overscroll-behavior: none;
+}
+  
+
 a{
     text-decoration: none;
 
@@ -37,6 +43,13 @@ h2{
 
 section{
     padding: 5vh 0;
+    @media (max-width:$breakpoint-mobile) {
+        flex-direction: column;
+    }     
+}
+
+.scroll_fade{
+    padding: 5vh 0;
     opacity: 0;
     transform: scale(0.9);
 
@@ -51,6 +64,8 @@ p{
 }
 
 .nav_pc {
+    width: 80%;
+    min-width: 800px;
     display: flex; // フレックスボックスを使用して横並びにする
     align-items: center; // アイテムを中央揃えにする
     justify-content: center; // コンテンツを中央に配置する
@@ -65,7 +80,7 @@ p{
   
     li {
       margin: 0 15px; // リストアイテム間の間隔を設定
-  
+        text-align: center;
       a {
         text-decoration: none; // テキストの下線を消す
         color: #333; // テキストカラーを設定
@@ -84,11 +99,11 @@ p{
 .nav {
     display: none; // デフォルトでは非表示
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 6vh;
+    left: 2vh;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 4;
     pointer-events: none;
 
     &.active{
@@ -122,19 +137,19 @@ p{
     }
   
     .nav_button {
-      position: absolute;
-      top: 20px;
+    //   position: absolute;
+      top: 10;
     //   right: 20px;
-      left: 20px;
+      left: 10;
       cursor: pointer;
-      z-index: 1010;
+      z-index: 5;
       display: block;
       pointer-events: auto;
   
       span {
         display: block;
-        width: 30px;
-        height: 3px;
+        width: 40px;
+        height: 4px;
         background-color: #333;
         margin-bottom: 5px;
       }
@@ -157,35 +172,40 @@ p{
 body{
     width: 100%;
     overflow-x: hidden;
-    header{
-        height: 100vh;
-        width: 100vw;
-        
-        
+    header{  
         .header_menu{
-            z-index: 10;
-            height: 10vh;
-            display: flex;
-            justify-content: space-between;
-            background: white;
+            // position: relative;
             position: fixed;
+            z-index: 10;
+            // height: 10vh;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: white;
+            // position: fixed;
             border-bottom: 1px solid #ccc;
+            align-items: stretch;
+            width: 100%;
             @media (max-width:$breakpoint-mobile) {
                 display: flex;
+                align-items: center;
                 flex-direction:column;
                 text-align: center;
                 position: absolute;
             }
 
             .logo{
-                width: auto;
-                height: 100%;
+                // width: auto;
+                // height: 100%;
+                height: 60px;
+                width: 10%;
                 overflow: hidden;
-                margin-left: 3%;
+                // margin-left: 3%;
+                text-align: center;
                 img{
                     width: auto;
                     height: 100%;
-                    max-width: 100%; /* 画像の最大幅を親要素の幅に合わせる */
+                    // max-width: 100%; /* 画像の最大幅を親要素の幅に合わせる */
                     object-fit: contain;
                 }
             }
@@ -199,15 +219,12 @@ body{
             .nav{
                 width: 100%;
             }   
-
-            .nav_pc{
-                width: 70%;
-            }
         }
 
         .top_image{
-            position: absolute;
-            top: 14vh;
+            // position: absolute;
+            // top: 14vh;
+            // position: relative;
             height: 90vh;
             background: rgba(0, 0, 0, 0.3);
             background-size: cover;
@@ -216,6 +233,7 @@ body{
             align-items: center;
             justify-content: center;
             text-align: center;
+
 
             &::before {
                 content: "";
@@ -248,6 +266,9 @@ body{
                     font-size: 2rem;
                     line-height: 3.4rem;
                     color: white;
+                    white-space: nowrap; /* テキストを折り返さない */
+                    overflow: hidden; /* はみ出たテキストを隠す */
+                    text-overflow: ellipsis; /* はみ出たテキストの末尾に省略記号を表示 */
                     span{
                         font-size: 3rem;
                         font-weight: bold;
@@ -291,8 +312,6 @@ body{
     }
     main{
         .about_us{
-            position: relative;
-            top: 0;
             background: #44B1C9;
             padding: 12% 0;
             // height: 90vh;
