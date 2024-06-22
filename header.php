@@ -63,13 +63,13 @@
         </div>
 
         <div class="top_image">
-            <div class="top_text">
+            <!-- <div class="top_text">
                 <h2>ハンドケアサロン</h2>
                 <p><span>加齢</span>による</p>
                 <p>お悩み解決サロン</p>
                 <p class="big">漢方アロマ×ハンドケア</p>
                 <p>女性のお悩み解決</p>
-            </div>
+            </div> -->
         </div>
 
         <div class="modal-container">
