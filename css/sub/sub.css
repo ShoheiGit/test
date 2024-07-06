@@ -5,8 +5,13 @@ body header .sub_image {
   height: 100%;
   position: relative;
 }
+@media (max-width: 768px) {
+  body header .sub_image {
+    height: 25vh;
+  }
+}
 body header .sub_image img {
-  max-height: 40vh;
+  max-height: 45vh;
   height: 90%;
   filter: brightness(0.4);
   -o-object-fit: cover;

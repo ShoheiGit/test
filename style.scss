@@ -137,9 +137,7 @@ p{
     }
   
     .nav_button {
-    //   position: absolute;
       top: 10;
-    //   right: 20px;
       left: 10;
       cursor: pointer;
       z-index: 5;
@@ -174,15 +172,12 @@ body{
     overflow-x: hidden;
     header{  
         .header_menu{
-            // position: relative;
             position: fixed;
             z-index: 10;
-            // height: 10vh;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             background: white;
-            // position: fixed;
             border-bottom: 1px solid #ccc;
             align-items: stretch;
             width: 100%;
@@ -195,17 +190,13 @@ body{
             }
 
             .logo{
-                // width: auto;
-                // height: 100%;
                 height: 60px;
                 width: 10%;
                 overflow: hidden;
-                // margin-left: 3%;
                 text-align: center;
                 img{
                     width: auto;
                     height: 100%;
-                    // max-width: 100%; /* 画像の最大幅を親要素の幅に合わせる */
                     object-fit: contain;
                 }
             }
@@ -222,13 +213,9 @@ body{
         }
 
         .top_image{
-            // position: absolute;
-            // top: 14vh;
-            // position: relative;
+            position: relative;
             height: 90vh;
-            // background: rgba(0, 0, 0, 0.3);
             background: url(img/top_origin.jpg);
-            filter: brightness(0.8);
             background-size: cover;
             background-position: center;
             display: flex;
@@ -244,14 +231,8 @@ body{
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: url(img/top_text.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                max-width: 1000px;
-                background-position: center;
-                // filter: brightness(0.8); /* 画像に薄暗いフィルターを追加 */
                 z-index: 1;
+                background: rgba($color: #000000, $alpha: 0.3);
             }
 
             img{
@@ -265,7 +246,14 @@ body{
                 z-index: 3;
                 h2{
                     color: white;
-                    padding-bottom: 4%;
+                    padding-bottom: 5%;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        // top: 8;
+                        left: 0;
+                        font-size: 1.5rem;
+                    }
                 }
                 p{
                     font-size: 2rem;
@@ -283,11 +271,21 @@ body{
                     font-size: 2.5rem;
                 }
 
+                .randomAnime {
+                    visibility: hidden;
+                }
+
                 @media (max-width:$breakpoint-mobile) {
+                    h2{
+                        span{
+                            margin-top: -2%;
+                        }
+                    }
                     p{
                         font-size: 1.5rem;
                         line-height: 2.9rem;
                         color: white;
+                        margin-top: 7%;
                         span{
                             font-size: 2.5rem;
                             font-weight: bold;
@@ -297,6 +295,8 @@ body{
                         font-size: 1.7rem;
                     }
                 }
+
+
             }
         }
     }
@@ -420,7 +420,9 @@ body{
 
                 .aroma_desc{
                     h2{
-                        font-size: 3.4rem;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin-bottom: 4%;
                     }
                 }
             }
@@ -510,7 +512,6 @@ body{
         }
 
         .news{
-            // height: 60vh;
             display: flex;
             justify-content: space-around;
             background-color: #44B1C9;
@@ -548,7 +549,6 @@ body{
         }
 
         .concept{
-            // background-color: #44B1C9;
             text-align: center;
             img{
                 width: 60%;

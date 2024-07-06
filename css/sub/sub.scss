@@ -16,10 +16,10 @@ body{
             height: 100%;
             position: relative;
             @media (max-width:$breakpoint-mobile) {
-                // height: 25vh;
+                height: 25vh;
             }
             img{
-                max-height: 40vh;
+                max-height: 45vh;
                 height: 90%;
                 filter: brightness(0.4);
                 object-fit: cover;

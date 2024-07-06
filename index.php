@@ -12,11 +12,11 @@
                 </div>
                 <div class="about_us_text  scroll_fade">
                     <h2>About Us</h2>
-                    <p>🤚🏻気付いたら顔より老けてる手の姿<br>
+                    <p>気付いたら顔より老けてる手の姿<br>
                     1番仕事する大事な手だからこそ究極のケアが必要</p>
                     <p>顔のお手入れサロンは沢山あるけど手のお手入れサロンはまだ少ない...<br>
-                    そんな加齢女性の為に作りました✨️<br>
-                    フェイシャル以上のお手入れを目指します🫶</p>
+                    そんな加齢女性の為に作りました<br>
+                    フェイシャル以上のお手入れを目指します</p>
                     <a href="<?php echo esc_url(home_url('/about')); ?>">Read More<span class="dli-arrow-right"></span></a>
                 </div>
             </div>
@@ -29,7 +29,8 @@
                 </div>
                 <div class="aroma_desc">
                     <div class="aroma_text">
-                        <h2>漢方アロマとは</h2>
+                        <h2>漢方アロマ<br>ハンドリンパマッサージ</h2>
+                        <h3>漢方アロマとは</h3>
                         <p>漢方の原料となる生薬と<br>西洋のハーフエッセンスをブレンドしたアロマです</p>
                     </div>
                     <div class="aroma_points">

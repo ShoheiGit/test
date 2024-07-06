@@ -10,14 +10,6 @@
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
-    <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sub/sub.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/about/about.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/menu/menu.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/access/access.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news/news.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/staff/staff.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/single/single.css"> -->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -54,7 +46,6 @@
                     <li><a href="<?php echo esc_url(home_url('/')); ?>">Top</a></li>
                     <li><a href="<?php echo esc_url(home_url('/menu')); ?>">Menu</a></li>
                     <li><a href="<?php echo esc_url(home_url('/news')); ?>">News</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/about')); ?>">About</a></li>
                     <li><a href="<?php echo esc_url(home_url('/staff')); ?>">Staff</a></li>
                     <li><a href="<?php echo esc_url(home_url('/access')); ?>">Access</a></li>
                     <li class="reserve modal-open"><a href="">予約</a></li>
@@ -63,13 +54,10 @@
         </div>
 
         <div class="top_image">
-            <!-- <div class="top_text">
-                <h2>ハンドケアサロン</h2>
-                <p><span>加齢</span>による</p>
-                <p>お悩み解決サロン</p>
-                <p class="big">漢方アロマ×ハンドケア</p>
-                <p>女性のお悩み解決</p>
-            </div> -->
+            <div class="top_text randomAnime">
+                <h2>Re.Laxy<br><span>リラクシー</span></h2>
+                <p>ハンドケア専門サロン</p>
+            </div>
         </div>
 
         <div class="modal-container">
@@ -94,11 +82,6 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/room1.png" alt="">
                     <h1>News</h1>
                 </div>
-            <?php elseif (is_page('about')): ?>
-                <div class="sub_image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/welcome.png" alt="">
-                    <h1>About Us</h1>
-                </div>
             <?php elseif (is_page('staff')): ?>
                 <div class="sub_image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/kabe.png" alt="">
@@ -108,6 +91,11 @@
                 <div class="sub_image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/top.jpg" alt="">
                     <h1>Access</h1>
+                </div>
+            <?php elseif (is_single()): ?>
+                <div class="sub_image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/welcome.png" alt="">
+                    <h1><?php the_title(); ?></h1>
                 </div>
             <?php endif; ?>
         <?php endif; ?>

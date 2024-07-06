@@ -111,4 +111,30 @@ $(function() {
 
         $('.modal_bg').toggle('active');
     });
+
+
+
+
+    //うごくテキスト
+    // top_textの中身の文字列がページをリロードすると、無限に消えたり出現したりするアニメーションを作るためのJavaScriptを追加します
+    // 以下のコードを追加してください
+
+    // ページがロードされたときに実行する処理
+    $(document).ready(function() {
+        var $topText = $(".top_text");
+
+        // 無限にアニメーションを実行する関数
+        function infiniteAnimation() {
+            $topText.fadeOut(1000, function() {
+                $topText.fadeIn(1000, function() {
+                    setTimeout(function() {
+                        infiniteAnimation(); // 再帰的に呼び出すことで無限ループ
+                    }, 3000); // 2秒待つ
+                });
+            });
+        }
+
+        // ページロード時にアニメーションを開始
+        infiniteAnimation();
+    });
 });
